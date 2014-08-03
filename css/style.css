@@ -1,0 +1,126 @@
+@import url('reset.css');
+
+body {
+    background: url(../img/FixturedBg.png) repeat;
+}
+
+.clear {
+    display: block;
+    clear: both;
+}
+
+.sticky {
+    height: 180px;
+    width: 200px;
+    box-shadow: 1px 1px 5px #575757;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.back-panel {
+    color: white;
+    display: none;
+    font-size: 14px;
+}
+
+.back-panel p {
+    font-size: 18px;
+}
+
+.sticky-content {
+    display: block;
+}
+
+.sticky textarea {
+    padding: 0;
+    border: none;
+    max-width: 195px;
+    min-width: 195px;
+    min-height: 170px;
+    max-height: 170px;
+    outline: none;
+    resize: none;
+    left: -2px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Arial', 'sans-serif';
+    position: relative;
+}
+
+.sticky p {
+    display: inline-block;
+
+}
+
+.yellow, .yellow textarea {
+    background-color: #fff2aa;
+}
+
+.green, .green textarea {
+    background-color: #dafd8d;
+}
+
+.blue, .blue textarea {
+    background-color: #a1f2fe;
+}
+
+#add {
+    font-size: 50px;
+    color: #fff;
+    border: 3px solid #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 33px;
+    text-align: center;
+    border-radius: 30px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+
+#add:hover {
+    color: #bebebe;
+    border-color: #bebebe;
+}
+
+.back {
+    font-size: 14px;
+    font-weight: normal;
+    font-style: italic;
+    position: relative;
+    top: -7px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 30px;
+    float: right;
+    left: 7px;
+    cursor: pointer;
+}
+
+.destroy {
+    background: url(../img/close.png) no-repeat;
+    width: 37px;
+    height: 37px;
+    position: absolute;
+    margin: -30px -30px;
+    border-radius: 65px;
+    cursor: pointer;
+    display: none;
+}
+
+.back:hover {
+    background: #ffffff;
+}
+
+.radio {
+    float: left;
+    margin-right: 14px;
+    font-size: 12px;
+}

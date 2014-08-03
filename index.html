@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Mac OS like Sticky Notes</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- templates -->
+<script type="text/template" id="sticky-front-tpl">
+    <span class="destroy"></span>
+    <div class="sticky-content">
+        <textarea><%= content %></textarea>
+        <span class="back">i</span>
+        <div class="clear"></div>
+    </div>
+    <div class="back-panel">
+        <div class="colors">
+            <p>Paper color:</p>
+            <br/>
+            <br/>
+            <div class="radio yellowButton">
+                <label for="bg-color-yellow-<%= id %>">Yellow</label>
+                <input type="radio" class="color-<%= id %>" id="bg-color-yellow-<%= id %>" name="cl-<%= id %>" value="yellow"/>
+            </div>
+            <div class="radio greenButton">
+                <label for="bg-color-green-<%= id %>">Green</label>
+                <input type="radio" class="color-<%= id %>" id="bg-color-green-<%= id %>" name="cl-<%= id %>" value="green"/>
+            </div>
+            <div class="radio blueButton">
+                <label for="bg-color-blue-<%= id %>">Blue</label>
+                <input type="radio" class="color-<%= id %>" id="bg-color-blue-<%= id %>" name="cl-<%= id %>" value="blue"/>
+            </div>
+            <div class="clear"></div>
+            <br/>
+            <hr/>
+            <p>Font style:</p>
+            <br/>
+            <br/>
+            <select class="font-family">
+                <option value="Arial">Arial</option>
+                <option value="Optima">Optima</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Arial Narrow">Arial Narrow</option>
+                <option value="Verdana">Verdana</option>
+            </select>
+            <select class="font-size">
+                <option value="12">12</option>
+                <option value="14">14</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+            </select>
+            <br/>
+            <br/>
+            <button class="apply">Apply</button>
+        </div>
+    </div>
+</script>
+
+<!-- base html -->
+<div id="stickies-app">
+    <div id="add">+</div>
+    <div id="stickies-list">
+    </div>
+</div>
+
+<!-- lib js -->
+<script src="js/lib/jquery.js"></script>
+<script src="js/lib/jquery-ui.js"></script>
+<script src="js/lib/jquery.drag.js"></script>
+
+<script src="js/lib/underscore.js"></script>
+<script src="js/lib/backbone.js"></script>
+<script src="js/lib/backbone.localStorage.js"></script>
+
+<!-- custom js -->
+<script src="app.js"></script>
+<script src="js/routes/main.js"></script>
+<script src="js/models/sticky.js"></script>
+<script src="js/collections/stickies.js"></script>
+<script src="js/views/sticky.js"></script>
+<script src="js/views/stickies.js"></script>
+
+<script>
+    $(function () {
+        app.initialize();
+    });
+</script>
+
+</body>
+</html>
